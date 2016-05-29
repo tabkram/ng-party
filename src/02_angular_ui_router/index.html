@@ -3,8 +3,10 @@
 <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../node_modules/angular/angular.min.js"></script>
+<script src="ngparty.js"></script>
 
-<body>
+<body ng-app="ngParty">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -14,10 +16,10 @@
     </h1>
     </div>
     </nav>
-	<div class="container-fluid">
+	<div class="container-fluid" ng-controller="GreetingController">
 		<div class="row">
 			<div class="jumbotron">
-				<h1>What is the first output of a programming language ?</h1>
+				<h1>{{greeting}}</h1>
 				<p></p>
 			</div>
 		</div>
