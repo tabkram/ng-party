@@ -4,7 +4,12 @@
 
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../../node_modules/angular/angular.min.js"></script>
-<script src="ngparty.js"></script>
+<script src="../../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="app/ngparty.module.js"></script>
+<script src="app/ngparty.routes.js"></script>
+<script src="app/greeting/sayhello.controller.js"></script>
+<script src="app/greeting/greeting.controller.js"></script>
 
 <body ng-app="ngParty">
 <nav class="navbar navbar-inverse">
@@ -16,13 +21,10 @@
     </h1>
     </div>
     </nav>
-	<div class="container-fluid" ng-controller="GreetingController">
-		<div class="row">
-			<div class="jumbotron">
-				<h1>{{greeting}}</h1>
-				<p></p>
-			</div>
-		</div>
+    <div ng-controller="SayHelloController" class⁼"row">
+        <button ng-click="sayHello()" class="btn btn-default col-md-offset-4 col-md-4">say hello!</button>
+    </div>
+	<div ui-view="main" class⁼"row">
 	</div>
 </body>
 
