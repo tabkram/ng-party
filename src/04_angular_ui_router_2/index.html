@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../node_modules/angular/angular.min.js"></script>
+<script src="../../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="app/ngparty.module.js"></script>
+<script src="app/ngparty.routes.js"></script>
+<script src="app/greeting/greeting.controller.js"></script>
+<script src="app/login/login.controller.js"></script>
+<script src="app/login/login.service.js"></script>
+
+<body ng-app="ngParty">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <h1 class="text-center">
+    <span class="label label-default">Welcome to the ng-party !</span>
+    </h1>
+    </div>
+    </nav>
+	<div ui-view="main" class⁼"row">
+	</div>
+</body>
+
+</html>
