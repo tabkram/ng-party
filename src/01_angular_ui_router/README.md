@@ -30,3 +30,5 @@ After that you should:
 * create a named ui-route called "main", having as:  a state name -> "greeting", as path -> "/greeting", as templateUrl the greeting html, and as controller "GreetingController".
 
 * create a new button in the index file associated with a new controller called "app/greeting/sayhello.controller.js" which enables navigation to "/greeting" route when clicked.
+
+* run the 01_angular_ui_router.karma.conf.js tests

@@ -17,17 +17,22 @@ module.exports = function(config) {
     files: [
       {pattern: 'node_modules/angular/angular.min.js',  watch: false},
       {pattern: 'node_modules/angular-mocks/angular-mocks.js',  watch: false},
+      {pattern: 'node_modules/angular-ui-router/release/angular-ui-router.min.js',  watch: false},
 
-      //excercise
-      'src/00_angularfy/*.js',
-      'src/00_angularfy/**/*.js',
+      //exercise
+      'src/01_angular_ui_router/**.js',
+      'src/01_angular_ui_router/**/ngparty.module.js',
+      'src/01_angular_ui_router/**/**.js',
+      'src/01_angular_ui_router/**/**/**.js',
 
       //solution
-      //'src/01_angular_ui_router/*.js',
-      //'src/01_angular_ui_router/**/*.js',
+      //'src/02_angular_ui_router/**.js',
+      //'src/02_angular_ui_router/**/ngparty.module.js',
+      //'src/02_angular_ui_router/**/**.js',
+      //'src/02_angular_ui_router/**/**/**.js',
 
-      //test files
-      'test/00_angularfy/*.test.js'
+      //tests
+      'test/01_angular_ui_router/*.test.js'
     ],
 
 
