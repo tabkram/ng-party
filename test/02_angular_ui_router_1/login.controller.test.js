@@ -13,8 +13,9 @@ describe('LoginController', function() {
       loginService = _LoginService_;
     }));
 
-    beforeEach(inject(function(_$controller_, $rootScope){
+    beforeEach(inject(function(_$controller_, _$state_, $rootScope){
         $controller = _$controller_;
+        $state = _$state_;
         loginScope = $rootScope.$new();
         loginController = $controller('LoginController', {$scope: loginScope});
     }));
@@ -35,6 +36,7 @@ describe('LoginController', function() {
     it('call connect function!', function () {
         expect(angular.isFunction(loginScope.connect)).toBe(true);
         spyOn(loginScope, 'connect').and.callThrough();
+        spyOn($state, 'go');
         loginScope.user = {
           login: "akram",
           password:"ng-party"
@@ -44,6 +46,8 @@ describe('LoginController', function() {
 
         expect(angular.isFunction(loginService.connect)).toBe(true);
         expect(angular.isFunction(loginService.getUser)).toBe(true);
+
+        expect($state.go).toHaveBeenCalledWith('greeting');       
 
         var serviceUser = loginService.getUser();
          expect(serviceUser.login).toBeDefined();
