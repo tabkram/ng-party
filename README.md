@@ -8,3 +8,9 @@ npm install http-server -g
 npm install
 
 karma start 
+
+
+---
+## CI
+
+* codeship integration
