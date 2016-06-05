@@ -4,7 +4,9 @@
   "description": "angular party",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node_modules/http-server/bin/http-server .",
+    "test02": "node node_modules/karma/bin/karma start --single-run=true 02_angular_ui_router_1.karma.conf.js",
+    "codecov" : "./node_modules/.bin/codecov --token=22638bf2-26a4-4155-8f34-e8df9cbc69b2"
   },
   "keywords": [
     "angular"
@@ -24,10 +26,7 @@
     "karma-jshint-preprocessor": "0.0.6"
   },
   "dependencies": {
+    "codecov": "^1.0.1",
     "http-server": "^0.9.0"
-  },
-  "scripts": {
-   "start" : "node node_modules/http-server/bin/http-server .",
-   "test02" : "node node_modules/karma/bin/karma start --single-run=true 02_angular_ui_router_1.karma.conf.js" 
   }
 }

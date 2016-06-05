@@ -44,8 +44,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/02_angular_ui_router_1/app/**/**.js': ["jshint",'coverage']
-      //"src/03_angular_ui_router_2/app/**/**.js": ["jshint",'coverage']
+      //'src/02_angular_ui_router_1/app/**/**.js': ["jshint",'coverage']
+      "src/03_angular_ui_router_2/app/**/**.js": ["jshint",'coverage']
     },
 
 
@@ -57,7 +57,7 @@ module.exports = function(config) {
     // add plugin settings
     coverageReporter: {
       // type of file to output, use text to output to console
-      type : 'text',
+      type : 'lcov',
       // directory where coverage results are saved
       dir: 'test/results/coverage/'
       // if type is text or text-summary, you can set the file name
