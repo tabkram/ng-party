@@ -20,16 +20,16 @@ module.exports = function(config) {
       {pattern: 'node_modules/angular-ui-router/release/angular-ui-router.min.js',  watch: false},
 
       //exercise
-      'src/02_angular_ui_router_1/**.js',
-      'src/02_angular_ui_router_1/**/ngparty.module.js',
-      'src/02_angular_ui_router_1/**/**.js',
-      'src/02_angular_ui_router_1/**/**/**.js',
+      // 'src/02_angular_ui_router_1/**.js',
+      // 'src/02_angular_ui_router_1/**/ngparty.module.js',
+      // 'src/02_angular_ui_router_1/**/**.js',
+      // 'src/02_angular_ui_router_1/**/**/**.js',
 
       //solution
-      // 'src/03_angular_ui_router_2/**.js',
-      // 'src/03_angular_ui_router_2/**/ngparty.module.js',
-      // 'src/03_angular_ui_router_2/**/**.js',
-      // 'src/03_angular_ui_router_2/**/**/**.js',
+      'src/03_angular_ui_router_2/**.js',
+      'src/03_angular_ui_router_2/**/ngparty.module.js',
+      'src/03_angular_ui_router_2/**/**.js',
+      'src/03_angular_ui_router_2/**/**/**.js',
 
       //tests
       'test/02_angular_ui_router_1/*.test.js'
@@ -44,14 +44,31 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'src/02_angular_ui_router_1/app/**/**.js': ["jshint",'coverage']
+      //"src/03_angular_ui_router_2/app/**/**.js": ["jshint",'coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
+    // add plugin settings
+    coverageReporter: {
+      // type of file to output, use text to output to console
+      type : 'text',
+      // directory where coverage results are saved
+      dir: 'test/results/coverage/'
+      // if type is text or text-summary, you can set the file name
+      // file: 'coverage.txt'
+    },
+
+    // add plugin settings
+    junitReporter: {
+      // location of results output file
+      outputFile: 'test/results/junit-results.xml'
+    },
 
     // web server port
     port: 9876,

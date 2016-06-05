@@ -13,7 +13,7 @@ angular.module("ngParty").service('LoginService', LoginService);
   return  {
   	connect : connect,
   	getUser : getUser
-  }
+  };
 
   function connect(user){
   	self.user = user;
