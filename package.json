@@ -28,6 +28,6 @@
   },
   "scripts": {
    "start" : "node node_modules/http-server/bin/http-server .",
-   "test02" : "node node_modules/karma/bin/karma start 02_angular_ui_router_1.karma.conf.js" 
+   "test02" : "node node_modules/karma/bin/karma start --single-run=true 02_angular_ui_router_1.karma.conf.js" 
   }
 }
