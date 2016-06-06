@@ -15,24 +15,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      {pattern: 'node_modules/angular/angular.min.js',  watch: false},
-      {pattern: 'node_modules/angular-mocks/angular-mocks.js',  watch: false},
-      {pattern: 'node_modules/angular-ui-router/release/angular-ui-router.min.js',  watch: false},
-
-      //exercise
-      // 'src/02_angular_ui_router_1/**.js',
-      // 'src/02_angular_ui_router_1/**/ngparty.module.js',
-      // 'src/02_angular_ui_router_1/**/**.js',
-      // 'src/02_angular_ui_router_1/**/**/**.js',
+      {pattern: '../../node_modules/angular/angular.min.js',  watch: false},
+      {pattern: '../../node_modules/angular-mocks/angular-mocks.js',  watch: false},
+      {pattern: '../../node_modules/angular-ui-router/release/angular-ui-router.min.js',  watch: false},
 
       //solution
-      'src/03_angular_ui_router_2/**.js',
-      'src/03_angular_ui_router_2/**/ngparty.module.js',
-      'src/03_angular_ui_router_2/**/**.js',
-      'src/03_angular_ui_router_2/**/**/**.js',
+      '../../src/03_angular_ui_router_2/**.js',
+      '../../src/03_angular_ui_router_2/**/ngparty.module.js',
+      '../../src/03_angular_ui_router_2/**/**.js',
+      '../../src/03_angular_ui_router_2/**/**/**.js',
 
       //tests
-      'test/02_angular_ui_router_1/*.test.js'
+      '../02_angular_ui_router_1/*.test.js'
     ],
 
 
@@ -44,8 +38,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      //'src/02_angular_ui_router_1/app/**/**.js': ["jshint",'coverage']
-      "src/03_angular_ui_router_2/app/**/**.js": ["jshint",'coverage']
+      "../../src/03_angular_ui_router_2/app/**/**.js": ["jshint",'coverage']
     },
 
 
@@ -59,7 +52,7 @@ module.exports = function(config) {
       // type of file to output, use text to output to console
       type : 'lcov',
       // directory where coverage results are saved
-      dir: 'test/results/coverage/'
+      dir: '../results/coverage/'
       // if type is text or text-summary, you can set the file name
       // file: 'coverage.txt'
     },
@@ -67,7 +60,7 @@ module.exports = function(config) {
     // add plugin settings
     junitReporter: {
       // location of results output file
-      outputFile: 'test/results/junit-results.xml'
+      outputFile: '../results/junit-results.xml'
     },
 
     // web server port
@@ -89,7 +82,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

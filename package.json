@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server .",
-    "test02": "node node_modules/karma/bin/karma start --single-run=true 02_angular_ui_router_1.karma.conf.js",
+    "test02-solution": "node node_modules/karma/bin/karma start --single-run=true test/config/02_angular_ui_router_1.solution.karma.conf.js",
     "codecov": "./node_modules/.bin/codecov --token=22638bf2-26a4-4155-8f34-e8df9cbc69b2"
   },
   "keywords": [
@@ -23,7 +23,9 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
     "karma-jasmine": "^1.0.2",
-    "karma-jshint-preprocessor": "0.0.6"
+    "karma-jshint-preprocessor": "0.0.6",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7"
   },
   "dependencies": {
     "codacy-coverage": "^1.1.3",
