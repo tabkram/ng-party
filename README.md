@@ -12,6 +12,9 @@ npm install http-server -g
 
 npm install
 
-karma start 
+karma start
 
 
+---
+
+Authored by: Akram TABKA
