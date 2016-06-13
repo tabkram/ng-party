@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server .",
-    "test02-solution": "node node_modules/karma/bin/karma start --single-run=true test/config/02_angular_ui_router_1.solution.karma.conf.js",
-    "codecov": "./node_modules/.bin/codecov --token=22638bf2-26a4-4155-8f34-e8df9cbc69b2"
+    "codecov": "./node_modules/.bin/codecov --token=22638bf2-26a4-4155-8f34-e8df9cbc69b2",
+    "test01-solution"  :  "node node_modules/karma/bin/karma start  --single-run=true test/config/01_angular_ui_router.solution.karma.conf.js",
+    "test02"  :  "node node_modules/karma/bin/karma start test/config/02_angular_ui_router_1.karma.conf.js",
+    "test02-solution": "node node_modules/karma/bin/karma start --single-run=true test/config/02_angular_ui_router_1.solution.karma.conf.js"
   },
   "keywords": [
     "angular"

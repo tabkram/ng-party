@@ -19,14 +19,14 @@ module.exports = function(config) {
       {pattern: '../../node_modules/angular-mocks/angular-mocks.js',  watch: false},
       {pattern: '../../node_modules/angular-ui-router/release/angular-ui-router.min.js',  watch: false},
 
-      //exercise
+      //solution
       '../../src/02_angular_ui_router_1/**.js',
       '../../src/02_angular_ui_router_1/**/ngparty.module.js',
       '../../src/02_angular_ui_router_1/**/**.js',
       '../../src/02_angular_ui_router_1/**/**/**.js',
 
       //tests
-      '../02_angular_ui_router_1/*.test.js'
+      '../01_angular_ui_router/*.test.js'
     ],
 
 
@@ -41,16 +41,14 @@ module.exports = function(config) {
       '../../src/02_angular_ui_router_1/app/**/**.js': ["jshint",'coverage']
     },
 
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['progress', 'coverage'],
 
-    // add plugin settings
     coverageReporter: {
       // type of file to output, use text to output to console
-      type : 'text',
+      type : 'lcov',
       // directory where coverage results are saved
       dir: '../results/coverage/'
       // if type is text or text-summary, you can set the file name
@@ -82,7 +80,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
